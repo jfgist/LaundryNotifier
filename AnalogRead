@@ -1,0 +1,37 @@
+/*
+September 22, 2014 
+
+Read value(s) from a vibration sensor and pass those out through some interface.
+(Maybe SPI, I2C or Serial/USB)
+*/
+
+int sensorPin1 = A0;    // input pin for sensor 1
+int sensorPin1 = A1;    // input pin for sensor 1
+int ledPin = 13;      // LED pin
+int sensorValue = 0;  // variable to store the value coming from the sensor
+
+void setup() {
+  Serial.begin(9600);         // open serial connection
+  pinMode(ledPin, OUTPUT);    // declare the ledPin as an OUTPUT:
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue1 = analogRead(sensorPin1);    
+  sensorValue2 = analogRead(sensorPin2);    
+  // turn the ledPin on
+  // digitalWrite(ledPin, HIGH);  
+  
+  if (Serial.available())
+  {
+    switch(Serial.read()) {
+      case 'Sensor1':
+         Serial.write(sensorValue1);
+         break;
+      case 'Sensor2':
+         Serial.write(sensorValue2);
+         break;
+    }
+    //delay(100); //might not need this.  Probably need delay on the pi side
+  }
+}
