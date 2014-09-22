@@ -20,3 +20,9 @@ Motivation
 ==========
 
 The buzzer on my washing machine is ridiculously loud so I usually just turn it off...but then I forget about my laundry and may have to wash it again if is sits too long.  Hopefully the notification on my cell phone will be a better reminder.
+
+
+Contents
+========
+
+- AnalogRead - Arduino code to constantly read values from two sensors and return the value for one of them when the appropriate command is initiated over the serial connection.
