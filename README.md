@@ -27,3 +27,5 @@ Contents
 ========
 
 - AnalogRead - Arduino code to constantly read values from two sensors and return the value for one of them when the appropriate command is initiated over the serial connection.
+- LaundryController.py - Main code for executing the functionality.  This will likely be populated with information gianed from running characterize
+- Characterize.py - Generic method to gather sensor data and characterize the vibrations of the washer and dryer.
