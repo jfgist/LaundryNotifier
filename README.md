@@ -26,7 +26,19 @@ The buzzer on my washing machine is ridiculously loud so I usually just turn it 
 Contents
 ========
 
-- AnalogRead - Arduino code to constantly read values from two sensors and return the value for one of them when the appropriate command is initiated over the serial connection.
+- AnalogRead.ino - Arduino code to constantly read values from two sensors and return the value for one of them when the appropriate command is initiated over the serial connection.
 - LaundryController.py - Main code for executing the functionality.  This will likely be populated with information gianed from running characterize
 - Characterize.py - Generic method to gather sensor data and characterize the vibrations of the washer and dryer.
 - Utils.py - currently just has the plot function for plotting the logged data.
+
+Connections/Usage
+=================
+
+Connections Between the Pi and Arduino.
+Vcc (3.3v) on the Arduino connects to the GPIO Vcc (3.3v) pin:    Pin #1.
+Ground on the Arduino connects to the GPIO Ground pin:           Pin #6.
+TxD on the Arduino connects to the GPIO RxD pin:                        Pin #10.
+RxD on the Arduino connects to the GPIO TxD pin:                        Pin #8.
+
+Upload AnalogRead.ino to the Arduino
+Execute Characterize.py from the Raspberry Pi
