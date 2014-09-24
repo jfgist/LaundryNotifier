@@ -40,22 +40,22 @@ print "Logging Started. CTRL-C to stop\n"
 while True:
 	try:
 		# read data from serial
-		ser.write('Sensor1')
+		ser.write('1')
 		line = ser.readline()
 		print line
 		logFile1.write(line)
 		
-		ser.write('Sensor2')
+		ser.write('2')
 		line = ser.readline()
 		print line
 		logFile2.write(line)
 
-		ser.write('Sensor3')
+		ser.write('3')
 		line = ser.readline()
 		print line
 		logFile3.write(line)
 		
-		ser.write('Sensor4')
+		ser.write('4')
 		line = ser.readline()
 		print line
 		logFile4.write(line)
