@@ -23,7 +23,7 @@ ser = serial.Serial(sserPort,9600,timeout=1)
 
 #check if port is open
 if (ser.isOpen() == False):
-	print "ERRROR: Uanble to open serial port "\n"
+	print "ERRROR: Uanble to open serial port\n"
 	exit(0);
 else: 
 	print "Port Opened"
