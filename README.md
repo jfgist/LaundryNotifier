@@ -23,6 +23,11 @@ Motivation
 The buzzer on my washing machine is ridiculously loud so I usually just turn it off...but then I forget about my laundry and may have to wash it again if is sits too long.  Hopefully the notification on my cell phone will be a better reminder.
 
 
+DEpendencies
+============
+matplotlib - sudo apt-get install python-matplotlib
+
+
 Contents
 ========
 
