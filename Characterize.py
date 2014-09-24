@@ -19,7 +19,7 @@ print "\n************************************"
 print "\nLog Data"
 print "\nAttempting to open serial port: ", serPort," for logging\n"
 
-ser = serial.Serial(sserPort,9600,timeout=1)
+ser = serial.Serial(serPort,9600,timeout=1)
 
 #check if port is open
 if (ser.isOpen() == False):
@@ -44,16 +44,19 @@ while True:
 		line = ser.readline()
 		print line
 		logFile1.write(line)
-		
+		time.sleep(delay)
+
 		ser.write('2')
 		line = ser.readline()
 		print line
 		logFile2.write(line)
+		time.sleep(delay)
 
 		ser.write('3')
 		line = ser.readline()
 		print line
 		logFile3.write(line)
+		time.sleep(delay)
 		
 		ser.write('4')
 		line = ser.readline()
@@ -66,6 +69,9 @@ while True:
 	
 		print "Logging Stopped\n"
 		break;
+	except serial.serialutil.SerialException:
+		print "SerialException"
+		pass
 		
 # close the serial port
 ser.flush()
@@ -90,22 +96,22 @@ if key=='y':
     f = open("log1.dat",'r')
     lines = f.readlines()
     f.close()
-	plot(lines)
+    plot(lines)
 
     f = open("log2.dat",'r')
     lines = f.readlines()
     f.close()
-	plot(lines)
+    plot(lines)
 
-	f = open("log3.dat",'r')
+    f = open("log3.dat",'r')
     lines = f.readlines()
     f.close()
-	plot(lines)
+    plot(lines)
 
     f = open("log4.dat",'r')
     lines = f.readlines()
     f.close()
-	plot(lines)
+    plot(lines)
 	
     print "Plot complete\n"   
 
