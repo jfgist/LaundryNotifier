@@ -9,7 +9,7 @@ The current plan is to use one of the vibration sensors from SparkFun to charact
 - [x] Update IDE with FTDI driver https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers
 - [x] Order vibration sensor(s)
 - [ ] Stopgap Solution (Timer)
-  - [ ] Setup email
+  - [ ] Setup email http://elinux.org/RPi_Email_IP_On_Boot_Debian
   - [ ] Write code to listen for button press
   - [ ] Send text(email) in code
 - [ ] Prototype Arduino/Raspberry Pi Communication
