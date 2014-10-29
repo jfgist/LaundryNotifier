@@ -30,10 +30,10 @@ The buzzer on my washing machine is ridiculously loud so I usually just turn it 
 
 Dependencies
 ============
-matplotlib - sudo apt-get install python-matplotlib
-ssmtp
-mailutils
-mpack
+* matplotlib - sudo apt-get install python-matplotlib
+* ssmtp
+* mailutils
+* mpack
 
 Contents
 ========
