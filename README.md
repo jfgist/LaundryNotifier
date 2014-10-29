@@ -9,7 +9,7 @@ The current plan is to use one of the vibration sensors from SparkFun to charact
 - [x] Update IDE with FTDI driver https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers
 - [x] Order vibration sensor(s)
 - [ ] Stopgap Solution (Timer)
-  - [ ] Setup email http://elinux.org/RPi_Email_IP_On_Boot_Debian
+  - [ ] Setup email http://elinux.org/RPi_Email_IP_On_Boot_Debian or http://rpi.tnet.com/project/faqs/smtp
   - [ ] Write code to listen for button press
   - [ ] Send text(email) in code
 - [ ] Prototype Arduino/Raspberry Pi Communication
@@ -28,7 +28,7 @@ Motivation
 The buzzer on my washing machine is ridiculously loud so I usually just turn it off...but then I forget about my laundry and may have to wash it again if is sits too long.  Hopefully the notification on my cell phone will be a better reminder.
 
 
-DEpendencies
+Dependencies
 ============
 matplotlib - sudo apt-get install python-matplotlib
 ssmtp
