@@ -15,7 +15,6 @@ GPIO.setup(17,GPIO.IN)
 to = 'james.gist@gmail.com'
 gmail_user = 'raspberrypi1409@gmail.com'
 gmail_password = ''
-smtpserver = smtplib.SMTP('smtp.gmail.com', 587)
 today = datetime.date.today()
 # Very Linux Specific
 #msg = MIMEText(my_ip)
@@ -35,6 +34,7 @@ while True:
     msg['Subject'] = 'Message from RaspberryPi on %s' % today.strftime('%b %d %Y')
     msg['From'] = gmail_user
     msg['To'] = to
+    smtpserver = smtplib.SMTP('smtp.gmail.com', 587)
     smtpserver.ehlo()
     smtpserver.starttls()
     smtpserver.ehlo
