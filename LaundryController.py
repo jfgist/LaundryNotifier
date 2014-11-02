@@ -12,12 +12,10 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(17,GPIO.IN)
 
 # Change to your own account information
-to = 'james.gist@gmail.com'
+to = '@gmail.com'
 gmail_user = 'raspberrypi1409@gmail.com'
 gmail_password = ''
 today = datetime.date.today()
-# Very Linux Specific
-#msg = MIMEText(my_ip)
 
 prev_input = 0;
 while True:
@@ -29,9 +27,10 @@ while True:
   #if reading went from low to high
   if((not prev_input) and input):
     print("Button Pressed")
+    time.sleep(3600)
     prev_input = input
-    msg = MIMEText('Content')
-    msg['Subject'] = 'Message from RaspberryPi on %s' % today.strftime('%b %d %Y')
+    msg = MIMEText('ROTATE YO LAUNDRY')
+    msg['Subject'] = 'Pi-Notify on %s' % today.strftime('%b %d %Y')
     msg['From'] = gmail_user
     msg['To'] = to
     smtpserver = smtplib.SMTP('smtp.gmail.com', 587)
