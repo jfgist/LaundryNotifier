@@ -9,30 +9,35 @@ import time
 #GPIO Setup
 print("GPIO Setup")
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(17,GPIO.IN)
+GPIO.setup(18,GPIO.IN)
 
 # Change to your own account information
-to = '@gmail.com'
+to = 'james.gist@gmail.com'
 gmail_user = 'raspberrypi1409@gmail.com'
 gmail_password = ''
 today = datetime.date.today()
 
-buttonPressed = false
+buttonPressed = False
 
 while True:
   #take a reading
-  input = GPIO.input(17)
-  print("Input: " + input)
+  input = GPIO.input(18)
+  print("Input: ")
+  print(input)
+  print("IsButton Pressed:")
+  print(buttonPressed)
   time.sleep(0.1)
   
-  if(input & not buttonPressed):
+  if(input and not(buttonPressed)):
     print('Button Pressed')
-    buttonPressed = true
+    buttonPressed = True
     buttonPressTime = time.time()
     time.sleep(1)
 
   if (buttonPressed):
-    if ((buttonPressTime - time.time()) > 3600):
+    time.sleep(60)
+    if ((time.time() - buttonPressTime) > 3600):
+      print("Send Email")
       msg = MIMEText('ROTATE YO LAUNDRY')
       msg['Subject'] = 'Pi-Notify on %s' % today.strftime('%b %d %Y')
       msg['From'] = gmail_user
@@ -45,7 +50,7 @@ while True:
       smtpserver.sendmail(gmail_user, [to], msg.as_string())
       smtpserver.close()
       
-      buttonPressed = false
+      buttonPressed = False
 
 
 
