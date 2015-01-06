@@ -34,6 +34,7 @@ Dependencies
 * ssmtp
 * mailutils
 * mpack
+* autorun from rc.local http://www.raspberry-projects.com/pi/pi-operating-systems/raspbian/auto-running-programs
 
 Contents
 ========
