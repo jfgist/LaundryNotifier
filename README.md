@@ -36,6 +36,8 @@ Dependencies
 * mpack
 * autorun from rc.local http://www.raspberry-projects.com/pi/pi-operating-systems/raspbian/auto-running-programs
 
+* config file.  You must place a config file named email.conf in '/home/pi/tools/email.conf'
+
 Contents
 ========
 
